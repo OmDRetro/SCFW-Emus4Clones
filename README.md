@@ -3,7 +3,7 @@ A collection of modified binaries guaranteed to consistently work on clone GBAs 
 This is primarily intended to be used on a SuperCard SD with SCFW, but it should also be usable on existing ROM builders.
 
 # Emulator table
-Modified emulator binary | Basis / source | How to
+Modified emulator binary | Basis / source | SCFW usage
 :-:|:-:|:-:
 cologneV0.8-splashed.gba | [Cologne V0.8](https://www.zophar.net/consoles/gameboy/coleco/cologne.html) | Rename this to `cologne.gba`
 jagoombacolorV0.5-splashed.gba | [Jagoomba Color V0.5](https://github.com/EvilJagaGenius/jagoombacolor)  | Rename this to either `gb.gba` or `gbc.gba`
