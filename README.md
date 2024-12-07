@@ -25,4 +25,4 @@ PocketNES V9.98 by Maxzhou88 | [Maxzhou88](https://hiddenpalace.org/Maxzhou88) t
 # Notes to consider
 * The user has an option to use `Jagoomba Color` or `Super Goomba` as their preferred DMG GameBoy emulator.
     * However, only `Jagoomba Color` supports `Game Boy Color` games
-* The modified `Super Goomba` binary cannot save the color palette used on a ROM unlike the unmodified version that works on original hardware.
+* The modified `Super Goomba` binary can only save the color palette used on the first ROM available(in this case it's the "144P TEST" or the "240p test for GB"). The color palette changes will replicate on every other ROM found in `Super Goomba's` ROM list.
