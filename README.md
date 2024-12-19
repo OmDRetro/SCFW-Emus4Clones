@@ -1,6 +1,6 @@
 # SCFW-Emus4Clones
 A collection of modified binaries guaranteed to consistently work on clone GBAs like the Digi Retroboy, EXEQ GameBox SP, K1 GBA SP, etc...
-This is primarily intended to be used on a SuperCard SD with SCFW, but it should also be usable on existing ROM builders.
+This is primarily intended to be used on a SuperCard SD with SCFW, but it should also be usable on existing ROM builders provided that you don't add a splash screen for those emulators that have one.
 
 # Emulator table
 Modified emulator binary | Basis / source | SCFW usage
@@ -19,11 +19,23 @@ WasabiGBA-SCFW-splash-DummyROM.gba | [SCFW WasabiGBA V0.2.4](https://github.com/
 Modified emulator(s) | Description
 :-:|:-:
 Cologne, Jagoomba Color, SMSAdvance, SwanGBA | These emulators do not consistently run on a GBA clone with a SuperCard SD running SCFW. In order to add some consistency, I added in a splash screen.
-NGPGBA | This emulator, version 0.5.7, does NOT support splash screens. In order to make this consistently run on a GBA clone, I had to add in a [free redistributable homebrew](https://pdroms.de/files/snk-neogeopocket-ngp-neogeopocketcolor-ngpc/3d-techdemo-v1-0) made by [@THOR](https://thor.pdroms.de/) who's known in some online Neo Geo Pocket Homebrew community. This will force the user to select the ROM they intend to run via menu by holding `L` and `R`, but it definitely is better than not being able to run the emulator on a GBA clone.
-PCEAdvance, WasabiGBA, SuperGoomba | These emulators are tricky. Not only did I have to add a splash screen, but I had to add in a "dummy" ROM. I currently do not have the knowledge to make one so instead I used a copy of the [240p test suite](https://github.com/ArtemioUrbina/240pTestSuite) by Artemio Urbina and bundled it in `PCEAdvance` whereas for `Super Goomba` I bundled in [240p test for gb](https://github.com/pinobatch/240p-test-mini). Much like NGPGBA, the user will be forced to select their intended ROM by holding `L` and `R` then load the ROM manually.
+NGPGBA | This emulator, version 0.5.7, does NOT support splash screens but I might add one in at some point much like WasabiGBA-SCFW. In order to make this consistently run on a GBA clone, I had to add in a [free redistributable homebrew](https://pdroms.de/files/snk-neogeopocket-ngp-neogeopocketcolor-ngpc/3d-techdemo-v1-0) made by [@THOR](https://thor.pdroms.de/) who's known in some online Neo Geo Pocket Homebrew community. This will force the user to select the ROM they intend to run via menu by holding `L` and `R`, but it definitely is better than not being able to run the emulator on a GBA clone.
+PCEAdvance, Super Goomba | These emulators are tricky. Not only did I have to add a splash screen, but I had to add in a "dummy" ROM. For those emulators where I didn't use dummy ROMs, I used a copy of the [240p test suite](https://github.com/ArtemioUrbina/240pTestSuite) by Artemio Urbina and bundled it in `PCEAdvance` whereas for `Super Goomba` I bundled in [240p test for gb](https://github.com/pinobatch/240p-test-mini). Much like NGPGBA, the user will be forced to select their intended ROM by holding `L` and `R` then load the ROM manually.
+WasabiGBA | I created a [custom build of WasabiGBA](https://github.com/OmDRetro/WasabiGBA-SCFW) where the splash screen support is hooked in. Eventually, I figured out how to create a dummy ROM for this so now
 PocketNES V9.98 by Maxzhou88 | [Maxzhou88](https://hiddenpalace.org/Maxzhou88) the person who created the K1 GBA, REVO K101, etc... actually created a custom build of the famous PocketNES emulator. Since EWRAM overclock does NOT work on clones, this build adds an automated speedhack feature in its place. Works well on both authentic GBAs as well as clones!
 
-# Notes to consider
+# Notes
 * The user has an option to use `Jagoomba Color` or `Super Goomba` as their preferred DMG GameBoy emulator.
     * However, only `Jagoomba Color` supports `Game Boy Color` games
 * The modified `Super Goomba` binary can only save the color palette used on the first ROM available(in this case it's the "144P TEST" or the "240p test for GB"). The color palette changes will replicate on every other ROM found in `Super Goomba's` ROM list.
+
+# Credits
+
+* [OmDRetro](https://github.com/OmDRetro)
+    * Compiling/modifying/creating the entirety of pre-built binaries for clone GBA use.
+	* DummyROM for Watara Supervision
+	* Splash screen in mode 3
+
+> [!NOTE]
+> The base emulators and other ROMs mentioned and utilized belong to their respective owners.
+> This is simply a repository containing working binaries intended for clone GBA use.
